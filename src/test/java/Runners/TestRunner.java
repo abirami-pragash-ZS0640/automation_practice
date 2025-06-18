@@ -14,6 +14,7 @@ import org.junit.runner.RunWith;
                 "html:target/cucumber-html-report.html" ,
                 "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"
         },
+        //adding comments
         monochrome = true
 )
 
