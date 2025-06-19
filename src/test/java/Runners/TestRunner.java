@@ -7,7 +7,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/Featurefiles/CheckBox.feature",
+
+        features = { "src/test/java/Featurefiles/CheckBox.feature","src/test/java/Featurefiles/AddElements.feature"},
         glue = {"StepDef"},
         plugin = {
                 "pretty",

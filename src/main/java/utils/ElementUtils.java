@@ -16,12 +16,26 @@ public class ElementUtils {
         this.driver = driver;
     }
 
+    public boolean isVisible(WebElement element,int seconds) {
+    	new WebDriverWait(driver, Duration.ofSeconds(seconds))
+        .until(ExpectedConditions.visibilityOf(element));
+		return true;
+    }
+    
+    public boolean isNotVisible(WebElement element) {
+      
+            new WebDriverWait(driver, Duration.ofSeconds(10))
+                .until(ExpectedConditions.invisibilityOf(element));
+            return true;
+       
+    }
+    
     public void waitForElementVisible(By locator, int seconds) {
         new WebDriverWait(driver, Duration.ofSeconds(seconds))
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
-    public void clickElement(WebElement element) {
+    public void clickWebElement (WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
