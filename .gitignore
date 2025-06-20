@@ -1,2 +1,8 @@
 /target/
 /allure-results/
+.metadata
+
+.project
+.classpath
+
+/.settings

@@ -26,7 +26,6 @@ public class AddElement extends ElementUtils {
     
     public void clickAddElement() {
     	clickWebElement(AddElementButton);
-//    	AddElementButton.click();
     }
 
     public void clickDeleteElement() {
