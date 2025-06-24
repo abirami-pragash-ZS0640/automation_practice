@@ -14,7 +14,7 @@ public class CheckboxStepDef {
 	CheckBox checkbox;
 	WebDriver driver;
 	
-	 @Given ("User is on the heroku webpage")
+	 @Given ("User is on the heroku webpage for checkbox")
 	 public void user_is_on_the_heroku_page()
 	    {
 	        driver= DriverFactory.getDriver();

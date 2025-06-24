@@ -21,5 +21,12 @@ public class IndexPage extends ElementUtils{
     public void clickAddElement() {
     	AddElementLink.click();
     }
+    
+    @FindBy(xpath="//a[@href=\"/context_menu\"]")
+    private WebElement contextMenuLink;
+    
+    public void clickContextMenu() {
+    	contextMenuLink.click();
+    }
 
 }
