@@ -18,14 +18,28 @@ public class IndexPage extends ElementUtils{
     @FindBy(xpath="//a[@href=\"/add_remove_elements/\"]")
     private WebElement AddElementLink;
     
+
+    @FindBy(xpath="//a[@href=\"/drag_and_drop\"]")
+    private WebElement dragAndDropLink;
+
+   
+    
     @FindBy(xpath="//a[@href=\"/broken_images\"]")
     private WebElement BrokenImageLink;
+
     
     public void clickAddElement() {
     	AddElementLink.click();
     }
+    
+    public void clickDragAndDropElement() {
+    	dragAndDropLink.click();
+    }
+    
+
     public void clickBrokenImage() {
     	BrokenImageLink.click();
     }
+
 
 }

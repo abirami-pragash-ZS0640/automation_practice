@@ -8,10 +8,13 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
+
         features = { 
         		"src/test/java/feature/CheckBox.feature",
        		     "src/test/java/feature/AddElements.feature",
-        		  "src/test/java/feature/BrokenImage.feature"
+        		  "src/test/java/feature/BrokenImage.feature",
+        		  "src/test/java/feature/DragAndDrop.feature"
+
         		},
         glue = {"StepDef"},
         plugin = {
