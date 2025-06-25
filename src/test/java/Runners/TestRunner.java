@@ -14,7 +14,9 @@ import org.junit.runner.RunWith;
        		     "src/test/java/feature/AddElements.feature",
         		  "src/test/java/feature/BrokenImage.feature",
         		  "src/test/java/feature/DragAndDrop.feature",
-        		  "src/test/java/feature/ContextMenu.feature"
+        		  "src/test/java/feature/ContextMenu.feature",
+        		  "src/test/java/feature/DisappearElement.feature"
+        		  
 
         		},
 
