@@ -39,6 +39,12 @@ public class DynamicControl extends ElementUtils {
     @FindBy(xpath="//input[@type=\"text\"]")
     private WebElement inputField;
     
+    @FindBy(xpath="//button[@onclick=\"swapInput()\"]")
+    private WebElement disableButton;
+    
+    @FindBy(xpath="//p[@id=\"message\"]")
+    private WebElement disabledMessage;
+    
     public void clickDynamicControlElement() {
     	clickWebElement(dynamicControlLink);
     }
@@ -69,5 +75,17 @@ public class DynamicControl extends ElementUtils {
     	waitForWebElement(enabledMessage);
     	return getText(enabledMessage);
     }
+    
+    public void clicksDisableButton() {
+    		clickWebElement(disableButton);
+    }
+    
+    public void isElementDisabled() {
+    	waitForElementDisable(inputField);
+    }
 	
+   public String getDisabledMessage() {
+	   waitForWebElement(enabledMessage);
+   	   return getText(enabledMessage);
+   }
 }

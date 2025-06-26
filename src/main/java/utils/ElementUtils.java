@@ -39,6 +39,11 @@ public class ElementUtils {
     	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
           wait.until(ExpectedConditions.visibilityOf(element));
     }
+    
+   public void waitForElementDisable(WebElement element) {
+	   new WebDriverWait(driver, Duration.ofSeconds(20))
+       .until(ExpectedConditions.not(ExpectedConditions.elementToBeClickable(element)));
+   }
 
     public void clickWebElement (WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));

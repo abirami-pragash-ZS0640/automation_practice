@@ -60,5 +60,20 @@ public class DynamicControlStepDef {
 		    Assert.assertEquals("It's enabled!", enabledMessage);
 	}
 	
+	@When("user clicks the Disable button")
+	public void user_clicks_the_Disable_button() {
+		dynamicControlPage.clicksDisableButton();
+	}
+	
+	@Then("the input field should be disabled")
+	public void input_field_should_be_disabled() {
+		  dynamicControlPage.isElementDisabled(); 
+	}
+	
+	@And("the message \"It's disabled!\" should be displayed")
+	public void disable_should_be_visible() {
+		 String disabledMessage = dynamicControlPage.getDisabledMessage();
+		    Assert.assertEquals("It's disabled!", disabledMessage);
+	}
 	
 }
