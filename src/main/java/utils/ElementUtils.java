@@ -24,7 +24,7 @@ public class ElementUtils {
     
     public boolean isNotVisible(WebElement element) {
       
-            new WebDriverWait(driver, Duration.ofSeconds(10))
+            new WebDriverWait(driver, Duration.ofSeconds(20))
                 .until(ExpectedConditions.invisibilityOf(element));
             return true;
        
@@ -34,12 +34,28 @@ public class ElementUtils {
         new WebDriverWait(driver, Duration.ofSeconds(seconds))
                 .until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+    
+    public void waitForWebElement(WebElement element) {
+    	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+          wait.until(ExpectedConditions.visibilityOf(element));
+    }
+    
+   public void waitForElementDisable(WebElement element) {
+	   new WebDriverWait(driver, Duration.ofSeconds(20))
+       .until(ExpectedConditions.not(ExpectedConditions.elementToBeClickable(element)));
+   }
 
     public void clickWebElement (WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         wait.until(ExpectedConditions.elementToBeClickable(element)).click();
     }
 
+    public void isWebElementEnabled (WebElement element) {
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.elementToBeClickable(element));
+    }
+
+    
     public void clickElement(By locator) {
         new WebDriverWait(driver, Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(locator))
@@ -50,6 +66,10 @@ public class ElementUtils {
     {
         WebElement element=driver.findElement(locator);
         element.sendKeys(textToBeEntered);
+    }
+    
+    public String getText(WebElement element) {
+    	return element.getText();
     }
 
 }

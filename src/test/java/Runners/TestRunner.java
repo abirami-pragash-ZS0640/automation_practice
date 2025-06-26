@@ -18,7 +18,11 @@ import org.junit.runner.RunWith;
         		 "src/test/java/feature/ContextMenu.feature",
         		 "src/test/java/feature/DynamicContent.feature",
         		  "src/test/java/feature/DisappearElement.feature",
+
+        		  "src/test/java/feature/DynamicControl.feature",
+
         		"src/test/java/feature/Dropdown.feature"
+
 
         		},
 
