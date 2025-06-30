@@ -21,7 +21,9 @@ import org.junit.runner.RunWith;
         		  "src/test/java/feature/Dropdown.feature",
         		  "src/test/java/feature/DynamicLoading.feature",
         		  "src/test/java/feature/DynamicControl.feature",
-        		  "src/test/java/feature/Dropdown.feature"
+        		  "src/test/java/feature/Dropdown.feature",
+        		 "src/test/java/feature/EntryAd.feature"
+        		
 
         		},
 
