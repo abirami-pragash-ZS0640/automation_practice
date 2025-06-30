@@ -12,8 +12,7 @@ import org.junit.runner.RunWith;
         features = { 
         		 "src/test/java/feature/CheckBox.feature",
        		     "src/test/java/feature/AddElements.feature",
-
-//       		     "src/test/java/feature/BrokenImage.feature",
+      		     //"src/test/java/feature/BrokenImage.feature",
         		  "src/test/java/feature/DragAndDrop.feature",
         		  "src/test/java/feature/ContextMenu.feature",
         		  "src/test/java/feature/DynamicContent.feature",
@@ -23,9 +22,9 @@ import org.junit.runner.RunWith;
         		  "src/test/java/feature/DynamicControl.feature",
         		  "src/test/java/feature/Dropdown.feature",
         		  "src/test/java/feature/EntryAd.feature",
-        		  "src/test/java/feature/fileDownload.feature"
-        		
-
+        		  "src/test/java/feature/fileDownload.feature",
+        		 "src/test/java/feature/EntryAd.feature",
+        		"src/test/java/feature/ExitIntent.feature"
         		},
 
         glue = {"StepDef"},
